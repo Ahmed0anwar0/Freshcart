@@ -1,0 +1,234 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root
+{
+    --main-color:#0aad0a;
+    --light-color:#f0f3f2;
+    --shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
+    --font-family:'Encode Sans Expanded', sans-serif;
+    --rating-color:#ffc908;
+}
+
+body{
+    font-family: var(--font-family) !important;
+}
+.rating-color
+{
+    color: var(--rating-color);
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}
+.active ,a:hover{
+    color: black;
+    text-decoration: none;
+}
+.product
+{
+    transition: all 0.5s;
+}
+.product .btn 
+{
+    transition: transform 1s , opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.product:hover .btn 
+{
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+.font-sm
+{
+    font-size: 14px;
+}
+.text-main
+{
+    color: var(--main-color);
+}
+.text-main-light
+{
+    color: var(--light-color);
+}
+.bg-main
+{
+    background-color: var(--main-color) !important;
+}
+.bg-main-light 
+{
+    background-color: var(--light-color) !important;
+}
+.product{
+    transition: border 0.5s;
+}
+
+.dark\:text-white{
+    color: black !important;
+}
+
+.btn.w-full:hover{
+    background-color: #0aad0a;
+}
+.btn.w-full{
+    transition: all 0.5s;
+}
+.btn-wishlist{
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.product>div:hover .btn-wishlist{
+    opacity: 1;
+}
+.btn-wishlist.dit{
+    opacity: 1 !important;
+    right: 5%;
+    top: 20%;
+
+}
+
+button:hover{
+    text-decoration: none !important;
+}
+#search,.footerEmail:focus{
+    outline-color: #0aad0a;
+    outline-width: 3px;
+}
+
+.toggle-nav{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .login,.register{
+        margin: 0 !important;
+    }   
+    .nav-links {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
+      }
+      .nav-links.open {
+        max-height: 500px; /* قد تحتاج لضبط هذا الحجم بناءً على المحتوى */
+        opacity: 1;
+      }
+      
+    .toggle-nav{
+        display: block;
+    }
+    
+.details{
+        flex-direction: column;
+ }
+ .details>div{
+        width: 70%;
+ }
+ .details .dit{
+    display: block;
+      position: static;
+ }
+ .details .info{
+   width: 100%;
+ }
+    
+ .cart-top{
+    margin: 0;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+
+}
+.cart-table{
+    margin: 0;
+    width: 100%;
+}
+.cost{
+    width: 80%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: auto;
+}
+nav{
+    text-align: left;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+}
+nav li{
+    margin-left: 10px;
+}
+nav ul{
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.contact-us{
+    text-align: center;
+}
+.contact-us input{
+    margin-bottom: 20px;
+}
+.deliveries img{
+    float: left;
+    margin-left: 15%;
+}
+.last-hr{
+    display: none;
+}
+.payment{
+    margin-bottom: 10px;
+}
+}
+
+@media screen and (max-width: 1024px){
+    
+    .footer .last{
+        display: block;
+    }
+    .footer .payment,.deliveries{
+        justify-content: center;
+    }
+    .footer input,button{
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+    .cart-top{
+        margin: 0;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    
+    }
+    .cart-table{
+        margin: 0;
+        width: 100%;
+    }
+    .cost{
+        width: 80%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin: auto;
+    }
+    .wishlist tr{
+          display: flex;
+          flex-wrap: wrap;
+          text-align: center;
+    }
+    .wishlist tr td{
+            width: 50%;
+    }
+    .wishlist tr td .btn{
+            width: 50%;
+    }
+    .wishlist tr .title{
+            padding-top: 40px;
+    }
+   
+}
